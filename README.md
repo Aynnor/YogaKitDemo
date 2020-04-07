@@ -23,7 +23,7 @@ pod 'YogaKit'
 
 
 ### Method Description
-```Objective-C
+```objc
 
 1.导入此头文件
 #import <YogaKit/UIView+Yoga.h>  
