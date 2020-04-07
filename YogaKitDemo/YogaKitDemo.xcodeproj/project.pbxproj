@@ -24,6 +24,9 @@
 		BBA07FAA243AC6A300B2B7B3 /* AlignItemsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA07FA9243AC6A300B2B7B3 /* AlignItemsVC.m */; };
 		BBA07FAE243B265600B2B7B3 /* AlignContentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA07FAD243B265600B2B7B3 /* AlignContentVC.m */; };
 		BBA07FB2243B354300B2B7B3 /* PositionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA07FB1243B354300B2B7B3 /* PositionVC.m */; };
+		BBA07FB6243CB11200B2B7B3 /* GrowVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA07FB5243CB11200B2B7B3 /* GrowVC.m */; };
+		BBA07FBA243D270A00B2B7B3 /* ShrinkVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA07FB9243D270A00B2B7B3 /* ShrinkVC.m */; };
+		BBA07FBE243D3EF600B2B7B3 /* BasisVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA07FBD243D3EF600B2B7B3 /* BasisVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +83,12 @@
 		BBA07FAD243B265600B2B7B3 /* AlignContentVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlignContentVC.m; sourceTree = "<group>"; };
 		BBA07FB0243B354300B2B7B3 /* PositionVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PositionVC.h; sourceTree = "<group>"; };
 		BBA07FB1243B354300B2B7B3 /* PositionVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PositionVC.m; sourceTree = "<group>"; };
+		BBA07FB4243CB11200B2B7B3 /* GrowVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GrowVC.h; sourceTree = "<group>"; };
+		BBA07FB5243CB11200B2B7B3 /* GrowVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GrowVC.m; sourceTree = "<group>"; };
+		BBA07FB8243D270A00B2B7B3 /* ShrinkVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShrinkVC.h; sourceTree = "<group>"; };
+		BBA07FB9243D270A00B2B7B3 /* ShrinkVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShrinkVC.m; sourceTree = "<group>"; };
+		BBA07FBC243D3EF600B2B7B3 /* BasisVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasisVC.h; sourceTree = "<group>"; };
+		BBA07FBD243D3EF600B2B7B3 /* BasisVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasisVC.m; sourceTree = "<group>"; };
 		D7E0501D124B39F64E73DD09 /* Pods-YogaKitDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YogaKitDemoTests.release.xcconfig"; path = "Target Support Files/Pods-YogaKitDemoTests/Pods-YogaKitDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		E11170C628CE708F2578C790 /* Pods_YogaKitDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YogaKitDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -194,6 +203,9 @@
 		BBA07F962439750500B2B7B3 /* ItemProperty */ = {
 			isa = PBXGroup;
 			children = (
+				BBA07FBB243D3EE700B2B7B3 /* Basis */,
+				BBA07FB7243D26F300B2B7B3 /* Shrink */,
+				BBA07FB3243CB10500B2B7B3 /* Grow */,
 			);
 			path = ItemProperty;
 			sourceTree = "<group>";
@@ -253,6 +265,33 @@
 				BBA07FB1243B354300B2B7B3 /* PositionVC.m */,
 			);
 			path = Position;
+			sourceTree = "<group>";
+		};
+		BBA07FB3243CB10500B2B7B3 /* Grow */ = {
+			isa = PBXGroup;
+			children = (
+				BBA07FB4243CB11200B2B7B3 /* GrowVC.h */,
+				BBA07FB5243CB11200B2B7B3 /* GrowVC.m */,
+			);
+			path = Grow;
+			sourceTree = "<group>";
+		};
+		BBA07FB7243D26F300B2B7B3 /* Shrink */ = {
+			isa = PBXGroup;
+			children = (
+				BBA07FB8243D270A00B2B7B3 /* ShrinkVC.h */,
+				BBA07FB9243D270A00B2B7B3 /* ShrinkVC.m */,
+			);
+			path = Shrink;
+			sourceTree = "<group>";
+		};
+		BBA07FBB243D3EE700B2B7B3 /* Basis */ = {
+			isa = PBXGroup;
+			children = (
+				BBA07FBC243D3EF600B2B7B3 /* BasisVC.h */,
+				BBA07FBD243D3EF600B2B7B3 /* BasisVC.m */,
+			);
+			path = Basis;
 			sourceTree = "<group>";
 		};
 		D8533D47F5DE592407373C0F /* Pods */ = {
@@ -506,15 +545,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBA07F73243974D200B2B7B3 /* main.m in Sources */,
+				BBA07FBA243D270A00B2B7B3 /* ShrinkVC.m in Sources */,
 				BBA07F9E2439750600B2B7B3 /* JumpViewController.m in Sources */,
 				BBA07F6B243974D100B2B7B3 /* YogaKitDemo.xcdatamodeld in Sources */,
 				BBA07FB2243B354300B2B7B3 /* PositionVC.m in Sources */,
+				BBA07FBE243D3EF600B2B7B3 /* BasisVC.m in Sources */,
 				BBA07FAE243B265600B2B7B3 /* AlignContentVC.m in Sources */,
 				BBA07FA224397E8500B2B7B3 /* UIColor+Addition.m in Sources */,
 				BBA07F5F243974D100B2B7B3 /* AppDelegate.m in Sources */,
 				BBA07F9D2439750600B2B7B3 /* FlexDirectionVC.m in Sources */,
 				BBA07FA6243AC08E00B2B7B3 /* JustifyContentVC.m in Sources */,
 				BBA07FAA243AC6A300B2B7B3 /* AlignItemsVC.m in Sources */,
+				BBA07FB6243CB11200B2B7B3 /* GrowVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
