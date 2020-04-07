@@ -12,7 +12,7 @@ This is FaceBook layout Framework YogaKit test demo.
 
 ```bash
 
-0. CocoaPods导入
+#CocoaPods导入
 #必须开启使用静态库选项
 use_frameworks!
 
@@ -23,7 +23,7 @@ pod 'YogaKit'
 
 
 ### Method Description
-```objc
+```Swift
 
 1.导入此头文件
 #import <YogaKit/UIView+Yoga.h>  
