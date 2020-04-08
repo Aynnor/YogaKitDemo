@@ -82,5 +82,62 @@ YGDimensionFlexibilityFlexibleHeight  //灵活的(灵活的可变动的)height
 
 ```
 
+### 关于YGValue的说明
+```Swift
+0. YGValue的定义
+
+#define YGUndefined NAN
+//NAN为 uint32 的最大值, 即: 2143289344
+所以: YGUndefined == 2143289344
+
+typedef struct YGValue {
+  float value;
+  YGUnit unit;
+} YGValue;
+
+extern const YGValue YGValueAuto;       //YGValueAuto = {YGUndefined, YGUnitAuto}
+extern const YGValue YGValueUndefined;  //YGValueUndefined = {YGUndefined, YGUnitUndefined};
+extern const YGValue YGValueZero;       //YGValueZero = {0, YGUnitPoint};
+
+
+
+//YGPointValue
+YGValue YGPointValue(CGFloat value)
+{
+  return (YGValue) { .value = value, .unit = YGUnitPoint };
+}
+
+//YGPercentValue
+YGValue YGPercentValue(CGFloat value)
+{
+  return (YGValue) { .value = value, .unit = YGUnitPercent };
+}
+
+"总结:"
+总的来说YGValue是有2种类型的, 凡是可以使用YGValue来设置属性的值都支持这两种值的设置
+
+//第一种:
+YGPointValue是一个准确的值, 描述的是占据多少个pt, 这是一个准确大小, 1pt就是屏幕上的0.35146毫米
+
+//第二种:
+YGPercentValue描述的是百分比, 最低是YGPercentValue(0), 占当前轴宽/高的0%, 
+最高没有上限,你可以设置为YGPercentValue(1000), 为当前轴宽/高的1000%
+
+YGValueAuto --> 
+YGValueUndefined --> 使用会导致crash, 不能主动使用这个值
+
+
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>> 下面是例子 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+//例如:
+layout.width = YGPointValue(50);
+布局后此item会得到50pt的准确宽度.
+
+layout.width = YGPercentValue(50);
+布局后此item会得到当前width轴向的container轴宽的50%的宽度, 这是个相对值不是确定值.
+
+```
+
 
 
