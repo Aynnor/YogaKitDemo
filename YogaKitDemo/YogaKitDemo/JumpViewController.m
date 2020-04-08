@@ -17,6 +17,7 @@
 //Item Property
 #import "GrowVC.h"
 #import "ShrinkVC.h"
+#import "BasisVC.h"
 
 
 @interface JumpViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -41,7 +42,7 @@
 
 -(void)createUI {
     
-    _dataArray = @[@[@"FlexDirection",@"JustifyContent",@"AlignItems",@"AlignContent",@"Position"],@[]];
+    _dataArray = @[@[@"FlexDirection",@"JustifyContent",@"AlignItems",@"AlignContent",@"Position"],@[@"Grow",@"Shrink",@"Basis"]];
     
     
     UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:(UITableViewStyleGrouped)];
@@ -72,21 +73,19 @@
 
 #pragma mark - UITableViewDataSource
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 2;
+    return _dataArray.count;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return section == 0 ? _dataArray.firstObject.count : 5;
+    return _dataArray[section].count;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CellID" forIndexPath:indexPath];
     cell.textLabel.textColor = UIColor.blueColor;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    if (indexPath.section == 0) {
-        cell.textLabel.text = [NSString stringWithFormat:@" %zd. --> %@", indexPath.row, _dataArray[0][indexPath.row]];
-    }else{
-        cell.textLabel.text = [NSString stringWithFormat:@" %zd", indexPath.row];
-    }
+
+    //蠢蛋
+    cell.textLabel.text = [NSString stringWithFormat:@" %zd. --> %@", indexPath.row, _dataArray[indexPath.section][indexPath.row]];
     
     return cell;
 }
@@ -126,6 +125,9 @@
             case 1:{
                 vc = [ShrinkVC new];
             }   break;
+            case 2:{
+                vc = [BasisVC new];
+            }   break;
             default:
                 break;
         }
@@ -140,9 +142,11 @@
 //TableView section HeaderView
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     UILabel *label = [UILabel new];
-    label.textColor = UIColor.blackColor;
+    label.backgroundColor = UIColor.blackColor;
+    label.textColor = UIColor.whiteColor;
     label.font = [UIFont systemFontOfSize:18];
     label.text = section == 0 ? @"  Container Property" : @"  Item Property";
+    
     return label;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
