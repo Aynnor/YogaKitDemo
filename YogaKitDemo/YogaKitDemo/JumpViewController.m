@@ -19,6 +19,12 @@
 #import "ShrinkVC.h"
 #import "BasisVC.h"
 
+//Other Property
+#import "TopLeftBottomRightVC.h"
+#import "MarginVC.h"
+#import "PaddingVC.h"
+#import "BorderWidthVC.h"
+
 
 @interface JumpViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -42,7 +48,7 @@
 
 -(void)createUI {
     
-    _dataArray = @[@[@"FlexDirection",@"JustifyContent",@"AlignItems",@"AlignContent",@"Position"],@[@"Grow",@"Shrink",@"Basis"]];
+    _dataArray = @[@[@"FlexDirection",@"JustifyContent",@"AlignItems",@"AlignContent",@"Position"],@[@"Grow",@"Shrink",@"Basis"],@[@"Top Left Bottom Right", @"Margin",@"Padding",@"BorderWidth"]];
     
     
     UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:(UITableViewStyleGrouped)];
@@ -51,7 +57,7 @@
     tableView.dataSource = self;
     tableView.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0.01, UIApplication.sharedApplication.statusBarFrame.size.height)];
     tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0.01, 0.01)];
-    NSLog(@"电池栏高度 -- height = %lf", UIApplication.sharedApplication.statusBarFrame.size.height);
+//    NSLog(@"电池栏高度 -- height = %lf", UIApplication.sharedApplication.statusBarFrame.size.height);
     
     
      //取消ScrollView的在有导航栏的情况下的内缩一小段距离的问题
@@ -117,7 +123,7 @@
             default:
                 break;
         }
-    }else{ //item 属性
+    }else if (indexPath.section == 1) { //item 属性
         switch (indexPath.row) {
             case 0:{
                 vc = [GrowVC new];
@@ -131,10 +137,27 @@
             default:
                 break;
         }
+    }else{ //Other属性
+        switch (indexPath.row) {
+            case 0:{
+                vc = [TopLeftBottomRightVC new];
+            }   break;
+            case 1:{
+                vc = [MarginVC new];
+            }   break;
+            case 2:{
+                vc = [PaddingVC new];
+            }   break;
+            case 3:{
+                vc = [BorderWidthVC new];
+            }   break;
+            default:
+                break;
+        }
     }
     
     
-    
+    //push
     [self.navigationController pushViewController:vc animated:YES];
 }
 

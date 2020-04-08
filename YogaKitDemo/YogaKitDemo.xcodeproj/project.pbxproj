@@ -27,6 +27,10 @@
 		BBA07FB6243CB11200B2B7B3 /* GrowVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA07FB5243CB11200B2B7B3 /* GrowVC.m */; };
 		BBA07FBA243D270A00B2B7B3 /* ShrinkVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA07FB9243D270A00B2B7B3 /* ShrinkVC.m */; };
 		BBA07FBE243D3EF600B2B7B3 /* BasisVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA07FBD243D3EF600B2B7B3 /* BasisVC.m */; };
+		BBA07FC7243DCE7F00B2B7B3 /* TopLeftBottomRightVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA07FC6243DCE7F00B2B7B3 /* TopLeftBottomRightVC.m */; };
+		BBA07FCA243DE08B00B2B7B3 /* MarginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA07FC9243DE08B00B2B7B3 /* MarginVC.m */; };
+		BBA07FCD243E0A2800B2B7B3 /* PaddingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA07FCC243E0A2800B2B7B3 /* PaddingVC.m */; };
+		BBA07FD0243E165900B2B7B3 /* BorderWidthVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA07FCF243E165900B2B7B3 /* BorderWidthVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +93,14 @@
 		BBA07FB9243D270A00B2B7B3 /* ShrinkVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShrinkVC.m; sourceTree = "<group>"; };
 		BBA07FBC243D3EF600B2B7B3 /* BasisVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasisVC.h; sourceTree = "<group>"; };
 		BBA07FBD243D3EF600B2B7B3 /* BasisVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasisVC.m; sourceTree = "<group>"; };
+		BBA07FC5243DCE7F00B2B7B3 /* TopLeftBottomRightVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TopLeftBottomRightVC.h; sourceTree = "<group>"; };
+		BBA07FC6243DCE7F00B2B7B3 /* TopLeftBottomRightVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TopLeftBottomRightVC.m; sourceTree = "<group>"; };
+		BBA07FC8243DE08B00B2B7B3 /* MarginVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MarginVC.h; sourceTree = "<group>"; };
+		BBA07FC9243DE08B00B2B7B3 /* MarginVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MarginVC.m; sourceTree = "<group>"; };
+		BBA07FCB243E0A2800B2B7B3 /* PaddingVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaddingVC.h; sourceTree = "<group>"; };
+		BBA07FCC243E0A2800B2B7B3 /* PaddingVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaddingVC.m; sourceTree = "<group>"; };
+		BBA07FCE243E165900B2B7B3 /* BorderWidthVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BorderWidthVC.h; sourceTree = "<group>"; };
+		BBA07FCF243E165900B2B7B3 /* BorderWidthVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BorderWidthVC.m; sourceTree = "<group>"; };
 		D7E0501D124B39F64E73DD09 /* Pods-YogaKitDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YogaKitDemoTests.release.xcconfig"; path = "Target Support Files/Pods-YogaKitDemoTests/Pods-YogaKitDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		E11170C628CE708F2578C790 /* Pods_YogaKitDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YogaKitDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -196,6 +208,7 @@
 			children = (
 				BBA07F972439750500B2B7B3 /* ContainerProperty */,
 				BBA07F962439750500B2B7B3 /* ItemProperty */,
+				BBA07FBF243DCCC100B2B7B3 /* Other */,
 			);
 			path = Codes;
 			sourceTree = "<group>";
@@ -292,6 +305,53 @@
 				BBA07FBD243D3EF600B2B7B3 /* BasisVC.m */,
 			);
 			path = Basis;
+			sourceTree = "<group>";
+		};
+		BBA07FBF243DCCC100B2B7B3 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				BBA07FC4243DCE4100B2B7B3 /* TopLeftBottomRight */,
+				BBA07FC2243DCCC100B2B7B3 /* Margin */,
+				BBA07FC1243DCCC100B2B7B3 /* Padding */,
+				BBA07FC3243DCE4100B2B7B3 /* BorderWidth */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		BBA07FC1243DCCC100B2B7B3 /* Padding */ = {
+			isa = PBXGroup;
+			children = (
+				BBA07FCB243E0A2800B2B7B3 /* PaddingVC.h */,
+				BBA07FCC243E0A2800B2B7B3 /* PaddingVC.m */,
+			);
+			path = Padding;
+			sourceTree = "<group>";
+		};
+		BBA07FC2243DCCC100B2B7B3 /* Margin */ = {
+			isa = PBXGroup;
+			children = (
+				BBA07FC8243DE08B00B2B7B3 /* MarginVC.h */,
+				BBA07FC9243DE08B00B2B7B3 /* MarginVC.m */,
+			);
+			path = Margin;
+			sourceTree = "<group>";
+		};
+		BBA07FC3243DCE4100B2B7B3 /* BorderWidth */ = {
+			isa = PBXGroup;
+			children = (
+				BBA07FCE243E165900B2B7B3 /* BorderWidthVC.h */,
+				BBA07FCF243E165900B2B7B3 /* BorderWidthVC.m */,
+			);
+			path = BorderWidth;
+			sourceTree = "<group>";
+		};
+		BBA07FC4243DCE4100B2B7B3 /* TopLeftBottomRight */ = {
+			isa = PBXGroup;
+			children = (
+				BBA07FC5243DCE7F00B2B7B3 /* TopLeftBottomRightVC.h */,
+				BBA07FC6243DCE7F00B2B7B3 /* TopLeftBottomRightVC.m */,
+			);
+			path = TopLeftBottomRight;
 			sourceTree = "<group>";
 		};
 		D8533D47F5DE592407373C0F /* Pods */ = {
@@ -547,7 +607,11 @@
 				BBA07F73243974D200B2B7B3 /* main.m in Sources */,
 				BBA07FBA243D270A00B2B7B3 /* ShrinkVC.m in Sources */,
 				BBA07F9E2439750600B2B7B3 /* JumpViewController.m in Sources */,
+				BBA07FC7243DCE7F00B2B7B3 /* TopLeftBottomRightVC.m in Sources */,
+				BBA07FCA243DE08B00B2B7B3 /* MarginVC.m in Sources */,
+				BBA07FD0243E165900B2B7B3 /* BorderWidthVC.m in Sources */,
 				BBA07F6B243974D100B2B7B3 /* YogaKitDemo.xcdatamodeld in Sources */,
+				BBA07FCD243E0A2800B2B7B3 /* PaddingVC.m in Sources */,
 				BBA07FB2243B354300B2B7B3 /* PositionVC.m in Sources */,
 				BBA07FBE243D3EF600B2B7B3 /* BasisVC.m in Sources */,
 				BBA07FAE243B265600B2B7B3 /* AlignContentVC.m in Sources */,
