@@ -1,4 +1,4 @@
-/**
+/*
  * Copyright (c) Facebook, Inc. and its affiliates.
  *
  * This source code is licensed under the MIT license found in the
@@ -180,7 +180,7 @@ static YGConfigRef globalConfig;
   // the measure function. Since we already know that this is a leaf,
   // this *should* be fine. Forgive me Hack Gods.
   const YGNodeRef node = self.node;
-  if (YGNodeHasMeasureFunc(node)) {
+  if (!YGNodeHasMeasureFunc(node)) {
     YGNodeSetMeasureFunc(node, YGMeasureView);
   }
 

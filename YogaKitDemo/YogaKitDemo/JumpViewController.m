@@ -168,8 +168,11 @@
     label.backgroundColor = UIColor.blackColor;
     label.textColor = UIColor.whiteColor;
     label.font = [UIFont systemFontOfSize:18];
-    label.text = section == 0 ? @"  Container Property" : @"  Item Property";
-    
+    if (section == 0) {
+        label.text = @"  Container Property";
+    }else{
+        label.text = section == 1 ? @"  Item Property" : @"  Other Property";
+    }
     return label;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
