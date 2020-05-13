@@ -2,9 +2,9 @@
 This is FaceBook layout Framework YogaKit test demo.
 
 
-![Framework Source Code](https://github.com/facebook/yoga/tree/master/YogaKit) YogaKit Layout
+源码地址 --> ![Framework Source Code](https://github.com/facebook/yoga/tree/master/YogaKit) YogaKit Layout
 </br>
-![Reference](http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html)
+FlexBox布局原理参考 --> ![Reference](http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html)
 </br>
 
 
